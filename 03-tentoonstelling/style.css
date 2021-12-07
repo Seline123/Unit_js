@@ -1,0 +1,9 @@
+body{
+    background-color:moccasin ;
+}
+
+#container{
+    background-color:burlywood;
+    width: 700px;
+    margin: auto;
+}
