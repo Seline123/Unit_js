@@ -1,0 +1,19 @@
+body{
+    background-color:lightblue;
+    color:black;
+}
+
+.chest {
+    border: cadetblue, 10px solid;
+    background-color: lightgreen;
+    color: hotpink;
+    padding: 40px;
+    margin: 6px;
+}
+.chest {
+    border: cadetblue, 10px solid;
+    background-color:lightgreen;
+    color:hotpink;
+    padding: 40px ;
+    margin: 6px;
+}
