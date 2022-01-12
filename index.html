@@ -1,72 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
-    <link rel="stylesheet" href="Style.css">
 </head>
 <body>
-    <h1>Slideshow gallerij</h1>
-    <div class="button" onclick="onClickNext()">Next image</div>
-    <div class="button" onclick="onClickPrevious()">Previous image</div>
-    <img id= "img"  src="https://www.zin.nl/app/uploads/2017/08/oceaan-768x410.png">
+    <table id="table">
+    </table>
 
     <script>
-        var position = 0;
-        var img1 = "https://www.zin.nl/app/uploads/2017/08/oceaan-768x410.png";
-        var img2 = "https://nl.metrotime.be/sites/default/files/dpistyles/ena_16_9_extra_big/node_76049/156381/public/old_wp_content/wp_import_content/20210508/Oceaan-water-Pexels.jpeg?itok=kn0F-Xs41620445699";
-        var img3 = "https://i1.wp.com/www.allesopeenrij.nl/wp-content/uploads/2016/11/pexels-photo-119701.jpeg?fit=640%2C359&ssl=1";
-        var img4 = "https://www.travelvalley.nl/uploads/headers/foto-s-schoonheid-oceaan.jpg";
-        var img5 = "https://nldazuu.com/wp-content/uploads/2020/10/32-nldazuu_zeelandschap-20201021-1080x675.jpg";
-        var img6 = "https://cdn.nos.nl/image/2020/06/26/658205/1024x576a.jpg";
-        var imgElement = document.getElementById("img");
-        
-        function onClickNext(){
-            position = position + 1;
-             
-            if(position == 6){
-                position = 0
-            }
-            console.log("position is " + position);
-            setImage();
-        }
-        function onClickPrevious(){
-            var imgElement = document.getElementById("img");
-            position = position + - 1;
-             
-            if(position == - 1){
-                position = 6;
-            }
-            console.log("position is " + position);
-            setImage();
-        }
-        function setImage(){
-            if(position == 0){
-                imgElement.src = img1;
-            }
-            
-            if(position == 1){
-                imgElement.src = img2;
-            }
-            
-            if(position == 2){
-                imgElement.src = img3;
-            }
-            
-            if(position == 3){
-                imgElement.src = img4;
-            }
-            
-            if(position == 4){
-                imgElement.src = img5;
-            }
-            
-            if(position == 5){
-                imgElement.src = img6;
-            }
-        }
-    </script>
+        var table = document.getElementById("table");
+            for(var i = 1; i < 100; i++){
+                var row = document.createElement("tr");
+                   for(var j = 1; j < 100; j++){
+                       var tableData = document.createElement("td");
+                       tableData.innerHTML = i * j;
+                       tableData.style.backgroundColor = "rgb("+ j*2.5+", 100,"+ i*2.5 +")";
+                       
+                       row.appendChild(tableData);
+                    }
+                    table.appendChild(row);  
+                }
+     </script>
 </body>
 </html>
